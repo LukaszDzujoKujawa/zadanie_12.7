@@ -1,0 +1,32 @@
+{
+  "name": "SM-12-7",
+  "version": "1.0.0",
+  "description": "https://kubkil.github.io/SM-12-7/",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm-run-all -s init:*",
+    "init:folders": "mkdir sass css js images",
+    "init:files": "touch index.html sass/style.scss css/style.css js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "watch": "npm-run-all -p watch:*",
+    "watch:sass": "sass --watch sass:css",
+    "watch:bs": "browser-sync start --server --files css/*.css *.html --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kubkil/SM-12-7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kubkil/SM-12-7/issues"
+  },
+  "homepage": "https://github.com/kubkil/SM-12-7#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "eslint": "^4.19.1",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2"
+  }
+}
